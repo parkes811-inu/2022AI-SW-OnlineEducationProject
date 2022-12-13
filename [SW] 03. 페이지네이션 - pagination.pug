@@ -1,0 +1,10 @@
+mixin pagination(path)
+    p 
+        - for(let i = 1; i <= totalPage; i++)
+            a(href=`${path}?page=${i}&perPage=${perPage}`)
+              if i == page
+                b= i 
+              else
+                 = i
+
+            = " "
